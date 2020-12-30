@@ -1,0 +1,115 @@
+.section-services {
+    height: 50vh;
+    &-wrapper {
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &_title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            h1 {
+                color: $dark-blue;
+                font-family: $poppins;
+                font-size: 30px;
+                font-weight: 800;
+                letter-spacing: 1px;
+            }
+            h5 {
+                color: #28384E;
+                font-family: $lato;
+                font-size: 14px;
+                margin-top: 10px;
+            }
+        }
+        &_facts {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 35px;
+            .fact {
+                width: 330px;
+                height: 245px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin-left: 50px;
+                &_background {
+                    width: 65px;
+                    height: 65px;
+                    background: #fce4c7;
+                    clip-path: circle(50% at 50% 50%);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &_image-1 {
+                        background: url('../IMG/web-design.png');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        width: 25px;
+                        height: 25px;
+                    }
+                    &_image-2 {
+                        background: url('../IMG/vector.png');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        width: 25px;
+                        height: 25px;
+                    }
+                    &_image-3 {
+                        background: url('../IMG/graphic-design.png');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+                &_text {
+                    h4 {
+                        color: $dark-blue;
+                        font-family: $lato;
+                        font-weight: 500;
+                        font-size: 17px;
+                        margin-top: 12px;
+                    }
+                    p {
+                        color: $dark-blue;
+                        font-family: $lato;
+                        font-weight: 500;
+                        font-size: 13px;
+                        margin-top: 12px;
+                        letter-spacing: 1px;
+                    }
+                }
+                &_learn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 12px;
+                    a {
+                        color: #1B498A;
+                        font-family: $lato;
+                        font-weight: 600;
+                        font-size: 14px;
+                        text-decoration: none;
+                    }
+                    &_image-arrow {
+                        background: url('../IMG/arrow.png');
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        width: 15px;
+                        height: 8px;
+                        margin-left: 4px;
+                        margin-top: 3px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

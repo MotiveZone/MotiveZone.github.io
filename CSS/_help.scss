@@ -1,0 +1,60 @@
+.section-help {
+    height: 50vh;
+    &-wrapper {
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &_text {
+            width: 50%;
+            &_title {
+                h1 {
+                    font-family: $poppins;
+                    font-size: 35px;
+                    color: $dark-blue;
+                }
+            }
+            &_subtitle {
+                margin-top: 20px;
+                width: 70%;
+                p {
+                    letter-spacing: 2px;
+                    color: #28384E;
+                    font-family: $lato;
+                    font-weight: 600;
+                    font-size: 16px;
+                    margin-top: 20px;
+                }
+                .second {
+                    letter-spacing: 2px;
+                    color: #28384E;
+                    font-family: $lato;
+                    font-weight: 600;
+                    font-size: 16px;
+                    margin-top: 20px;
+                }
+            }
+            &_btn {
+                margin-top: 30px;
+                a {
+                    background-color: $orange;
+                    color: white;
+                    font-family: $lato;
+                    font-size: 13px;
+                    border: $orange 5px solid;
+                    border-radius: 5px;
+                    padding: 8px 15px;
+                    text-decoration: none;
+                    margin-top: 40px;
+                }
+            }
+        }
+        &_image {
+            background: url('../IMG/people_and_steps.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 700px;
+            height: 400px;
+        }
+    }
+}

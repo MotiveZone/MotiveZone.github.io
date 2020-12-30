@@ -1,0 +1,128 @@
+.section-project {
+    height: 100vh;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(67,60,138,1) 87%, rgba(0,212,255,1) 100%);
+    &-wrapper {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        &_title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 80px;
+            h1 {
+                color: $white;
+                font-family: $poppins;
+                font-weight: 600;
+                font-size: 35px;
+            }
+            h5 {
+                color: $white;
+                font-family: $lato;
+                font-weight: 600;
+                font-size: 18px;
+                letter-spacing: 1px;
+                margin-top: 10px;
+            }
+            .second {
+                color: $white;
+                font-family: $lato;
+                font-weight: 600;
+                font-size: 18px;
+                letter-spacing: 1px;
+                margin-top: 3px;
+            }
+        }
+        &_cards {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            margin-right: 10px;
+            width: 100%;
+            .cardik {
+                height: 600px;
+                width: 310px;
+                margin-left: 85px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                cursor: pointer;
+                &_image-1 {
+                    background: url('../IMG/food_app.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 305px;
+                    height: 400px;
+                    -webkit-box-shadow: 45px -43px 13px -10px rgba(132, 134, 135, 0.2);
+                    -moz-box-shadow: 45px -43px 13px -10px rgba(132, 134, 135, 0.2);
+                    box-shadow: 45px -43px 13px -10px rgba(132, 134, 135, 0.2);
+                }
+                &_image-2 {
+                    background: url('../IMG/weather.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 305px;
+                    height: 400px;
+                    -webkit-box-shadow: 45px -43px 13px -10px rgba(132, 134, 135, 0.2);
+                    -moz-box-shadow: 45px -43px 13px -10px rgba(132, 134, 135, 0.2);
+                    box-shadow: 45px -43px 13px -10px rgba(132, 134, 135, 0.2);
+                }
+                &_image-3 {
+                    background: url('../IMG/travel.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 305px;
+                    height: 400px;
+                    -webkit-box-shadow: 45px -43px 13px -10px rgba(132, 134, 135, 0.2);
+                    -moz-box-shadow: 45px -43px 13px -10px rgba(132, 134, 135, 0.2);
+                    box-shadow: 45px -43px 13px -10px rgba(132, 134, 135, 0.2);
+                }
+                &_text {
+                    h4 {
+                        color: $white;
+                        font-family: $lato;
+                        font-size: 20px;
+                        margin-top: 8px;
+                    }
+                    p {
+                        color: $white;
+                        font-family: $lato;
+                        font-size: 15px;
+                        margin-top: 8px;
+                        letter-spacing: 2px;
+                    }
+                    .learn {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        width: 200px;
+                        height: 18px;
+                        h5 {
+                            color: $orange;
+                            font-family: $lato;
+                            font-size: 18px;
+                            margin-top: 8px;
+                            letter-spacing: 1px;
+                            cursor: pointer;
+                        }
+                        .arrow {
+                            background: url('../IMG/orange_arrow.png');
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            width: 15px;
+                            height: 15px;
+                            margin-left: 4px;
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

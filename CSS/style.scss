@@ -1,0 +1,17 @@
+@import './reset';
+@import './colors';
+@import './breakpoints';
+@import './text-setup';
+@import './header';
+@import './services';
+@import './help';
+@import './work';
+@import './project';
+@import './review';
+@import './footer';
+
+html, body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    position: relative;
+}

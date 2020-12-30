@@ -1,0 +1,134 @@
+.section-header {
+    position: relative;
+    height: 90vh;
+    background-color: #1A4789;
+    
+    &-wrapper {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        &_navbar {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 10px;
+            &_logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &__image {
+                    background: url('../IMG/rotation.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 35px;
+                    height: 35px;
+                    margin-bottom: 2px;
+                }
+                &__text {
+                    h2 {
+                        color: $white;
+                        font-size: 22px;
+                        font-family: $poppins;
+                        margin-left: 10px;
+                    }
+                }
+            }
+            &_links {
+                display: flex;
+                justify-content: space-between;
+                &__link {
+                    margin-left: 25px;
+                    a {
+                        text-decoration: none;
+                        font-family: $lato;
+                        font-size: 13px;
+                        color: $white;
+                        font-weight: 600;
+                    }
+                }
+            }
+            &_btn {
+                a {
+                    background-color: $orange;
+                    color: white;
+                    font-family: $lato;
+                    font-size: 13px;
+                    border: $orange 5px solid;
+                    border-radius: 5px;
+                    padding: 8px 15px;
+                    text-decoration: none;
+                }
+            }
+        }
+        &_main-cont {
+            display: flex;
+            align-items: center;
+            height: 80vh;
+            position: relative;
+            &_text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 60%;
+                
+                &__title {
+                    width: 70%;
+                    h1 {
+                        color: $white;
+                        font-size: 50px;
+                        font-family: $poppins;
+                        letter-spacing: 1px;
+                    }
+                }
+                &__subtitle {
+                    width: 70%;
+                    p {
+                        color: $white;
+                        font-size: 20px;
+                        font-family: $lato;
+                        margin-top: 15px;
+                        width: 70%;
+                        letter-spacing: 2px;
+                    }
+                    &_btn {
+                        margin-top: 35px;
+                        a {
+                            background-color: $orange;
+                            color: white;
+                            font-family: $lato;
+                            font-size: 12px;
+                            border: $orange 5px solid;
+                            border-radius: 5px;
+                            padding: 8px;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+            &_image {
+                background: url('../IMG/Cabinet.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 550px;
+                height: 550px;
+            }
+            &_circle_image {
+                background: url('../IMG/Circle.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 155px;
+                height: 155px;
+                position: absolute;
+                bottom: 70px;
+                right: 36%;
+                opacity: 0.2;
+            }
+        }
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
