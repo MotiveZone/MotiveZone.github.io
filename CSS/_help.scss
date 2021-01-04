@@ -1,22 +1,44 @@
 .section-help {
     height: 50vh;
+    @include media('<=phone') {
+        margin-top: 10%;
+        height: 80vh;
+        padding-bottom: 5px;
+    }
     &-wrapper {
         height: 50vh;
         display: flex;
         justify-content: center;
         align-items: center;
+        @include media('<=phone') {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
         &_text {
             width: 50%;
+            @include media('<=phone') {
+                width: 100%;
+                margin-left: 10px;
+                margin-top: 20px;
+            }
             &_title {
                 h1 {
                     font-family: $poppins;
                     font-size: 35px;
                     color: $dark-blue;
+                    @include media('<=phone') {
+                        font-size: 26px;
+                    }
                 }
             }
             &_subtitle {
                 margin-top: 20px;
                 width: 70%;
+                @include media('<=phone') {
+                    width: 100%;
+                }
                 p {
                     letter-spacing: 2px;
                     color: #28384E;
@@ -55,6 +77,11 @@
             background-size: contain;
             width: 700px;
             height: 400px;
+            @include media('<=phone') {
+                margin-top: 25px;
+                width: 350px;
+                height: 350px;
+            }
         }
     }
 }

@@ -2,17 +2,28 @@
     position: relative;
     height: 90vh;
     background-color: #1A4789;
-    
+    @include media('<=phone') {
+        padding-bottom: 50px;
+    }
     &-wrapper {
         height: 100vh;
         display: flex;
         flex-direction: column;
+        @include media('<=phone') {
+            padding-bottom: 50px;
+        }
         &_navbar {
             width: 100%;
             display: flex;
             justify-content: space-around;
             align-items: center;
             margin-top: 10px;
+            @include media('<=phone') {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-left: 15px;
+            }
             &_logo {
                 display: flex;
                 justify-content: center;
@@ -24,6 +35,10 @@
                     width: 35px;
                     height: 35px;
                     margin-bottom: 2px;
+                    @include media('<=phone') {
+                        width: 25px;
+                        height: 25px;
+                    }
                 }
                 &__text {
                     h2 {
@@ -31,6 +46,9 @@
                         font-size: 22px;
                         font-family: $poppins;
                         margin-left: 10px;
+                        @include media('<=phone') {
+                            font-size: 18px;
+                        }
                     }
                 }
             }
@@ -45,6 +63,94 @@
                         font-size: 13px;
                         color: $white;
                         font-weight: 600;
+                        @include media('<=phone') {
+                            display: none;
+                        }
+                    }
+                }
+                .menu-hamburger {
+                    margin-left: 20px;
+                    .toggle-links {
+                        background-color: $dark-blue;
+                        top: -140px;
+                        left: 0;
+                        z-index: -1;
+                        position: absolute; 
+                        visibility: hidden;
+                        width: 100%;
+                        transition: all ease .5s;  
+    
+                        &__link {
+                            width: 100%;
+                            &:hover {
+                                background-color: $gray;
+                                transition: color ease .25s;
+                                a {
+                                    color: white;
+                                }
+                            }
+                            a {
+                                display: inline-block;
+                                padding: 15px;
+                                color: white;
+                                width: 100%;
+                                text-decoration: none;
+                                font-family: $poppins;
+                            }
+                        }
+                    }
+                }
+                @include media('<=phone') {
+                    .menu-hamburger {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 30px;
+                        height: 30px;
+                        cursor: pointer;
+                        margin-right: -70px;
+    
+                        &__button {
+                            width: 30px;
+                            height: 2px;
+                            background-color: gray;
+                            transition: all ease .5s;
+    
+                            &::before, &::after {
+                                content: '';
+                                position: absolute;
+                                width: 30px;
+                                height: 2px;
+                                background-color: gray;
+                                transition: all ease .5s;
+    
+                            }
+    
+                            &::before {
+                                transform: translateY(-9px);
+                            }
+                            &::after {
+                                transform: translateY(9px);
+                            }
+                        }
+    
+                        &.open {
+                            .menu-hamburger__button {
+                                transform: translateX(-35px);
+                                background: transparent;
+                            }
+                            .menu-hamburger__button::before {
+                                transform: rotate(45deg) translate(25px, -25px);
+                            }
+                            .menu-hamburger__button::after {
+                                transform: rotate(-45deg) translate(25px, 25px);
+                            }
+                            .toggle-links {
+                                top: 40px;
+                                visibility: visible;
+                                z-index: 1000;
+                            }
+                        }
                     }
                 }
             }
@@ -58,6 +164,9 @@
                     border-radius: 5px;
                     padding: 8px 15px;
                     text-decoration: none;
+                    @include media('<=phone') {
+                        display: none;
+                    }
                 }
             }
         }
@@ -66,23 +175,42 @@
             align-items: center;
             height: 80vh;
             position: relative;
+            @include media('<=phone') {
+                display: flex;
+                flex-direction: column;
+                margin-top: 40px;
+                margin-left: 15px;
+            }
             &_text {
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
                 align-items: center;
                 width: 60%;
-                
+                @include media('<=phone') {
+                    width: 100%;
+                    margin-bottom: 0;
+                }
                 &__title {
                     width: 70%;
+                    @include media('<=phone') {
+                        width: 100%;
+                    }
                     h1 {
                         color: $white;
                         font-size: 50px;
                         font-family: $poppins;
                         letter-spacing: 1px;
+                        @include media('<=phone') {
+                            font-size: 30px;
+                        }
                     }
                 }
                 &__subtitle {
                     width: 70%;
+                    @include media('<=phone') {
+                        width: 100%;
+                    }
                     p {
                         color: $white;
                         font-size: 20px;
@@ -90,6 +218,10 @@
                         margin-top: 15px;
                         width: 70%;
                         letter-spacing: 2px;
+                        @include media('<=phone') {
+                            font-size: 20px;
+                            width: 90%;
+                        }
                     }
                     &_btn {
                         margin-top: 35px;
@@ -102,6 +234,8 @@
                             border-radius: 5px;
                             padding: 8px;
                             text-decoration: none;
+                            z-index: 1;
+                            
                         }
                     }
                 }
@@ -112,6 +246,11 @@
                 background-size: contain;
                 width: 550px;
                 height: 550px;
+                @include media('<=phone') {
+                    width: 250px;
+                    height: 250px;
+                    margin-top: 15px;
+                }
             }
             &_circle_image {
                 background: url('../IMG/Circle.png');
@@ -123,12 +262,16 @@
                 bottom: 70px;
                 right: 36%;
                 opacity: 0.2;
+                @include media('<=phone') {
+                    display: none;
+                }
             }
         }
         .wave {
             position: absolute;
             bottom: 0;
             left: 0;
+            z-index: 1000;
         }
     }
 }

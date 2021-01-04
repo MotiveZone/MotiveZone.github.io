@@ -1,16 +1,30 @@
 .section-work {
     height: 70vh;
+    @include media('<=phone') {
+        margin-top: 100px;
+        height: 100vh;
+    }
     &-wrapper {
         height: 70vh;
         display: flex;
         justify-content: space-around;
         align-items: center;
+        @include media('<=phone') {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
         &_image {
             background: url('../IMG/workplace.png');
             background-repeat: no-repeat;
             background-size: contain;
             width: 500px;
             height: 500px;
+            @include media('<=phone') {
+                width: 300px;
+                height: 250px;
+                margin-right: 35px;
+            }
         }
         &-text {
             width: 60%;
@@ -18,16 +32,29 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
+            @include media('<=phone') {
+                width: 100%;
+            }
             &_title {
                 margin-right: 225px;
+                @include media('<=phone') {
+                    margin-right: 0;
+                }
                 h1 {
                     font-family: $poppins;
                     font-size: 40px;
                     color: $dark-blue;
+                    @include media('<=phone') {
+                        font-size: 23px;
+                    }
                 }
             }
             &_subtitle {
                 width: 70%;
+                @include media('<=phone') {
+                    width: 100%;
+                    margin-left: 30px;
+                }
                 p {
                     letter-spacing: 2px;
                     color: #28384E;
@@ -35,6 +62,9 @@
                     font-weight: 600;
                     font-size: 16px;
                     margin-top: 20px;
+                    @include media('<=phone') {
+                        font-size: 12px;
+                    }
                 }
                 .second {
                     letter-spacing: 2px;
@@ -43,6 +73,9 @@
                     font-weight: 600;
                     font-size: 16px;
                     margin-top: 20px;
+                    @include media('<=phone') {
+                        font-size: 12px;
+                    }
                 }
                 &_form {
                     margin-top: 20px;
@@ -50,12 +83,15 @@
                     justify-content: flex-start;
                     align-items: center;
                     width: 70%;
+                    @include media('<=phone') {
+                        width: 95%;
+                    }
                     input {
                         width: 450px;
                         height: 45px;
                         border: 1px #d1d1d1 solid;
                         border-radius: 5px;
-                        text-indent: 15px
+                        text-indent: 15px;
                     }
                     a {
                         margin-left: 8px;
