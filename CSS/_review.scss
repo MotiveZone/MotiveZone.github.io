@@ -1,12 +1,23 @@
 .section-review {
     height: 70vh;
     position: relative;
+    @include media('<=phone') {
+      height: 100vh;
+      padding-bottom: 100px;
+    }
     &-wrapper {
         height: 70vh;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         align-items: flex-start;
+        @include media('<=phone') {
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
         &_carousel_with_image {
             display: flex;
             justify-content: flex-start;
@@ -25,6 +36,10 @@
                 top: -20px;
                 left: -20px;
                 z-index: 1000;
+                @include media('<=phone') {
+                  top: -100px;
+                  left: -20px;
+                }
             }
             &_girl {
                 background: url('../IMG/Girl.png');
@@ -34,6 +49,13 @@
                 height: 300px;
                 z-index: 1000;
                 margin-right: 20px;
+                @include media('<=phone') {
+                  position: absolute;
+                  width: 230px;
+                  height: 230px; 
+                  top: -75px;
+                  left: 20px;
+                }
             }
 
             $slider-width: 450px;
@@ -47,6 +69,10 @@
                 transform: translate(-50%, -50%);
                 width: $slider-width;
                 height: $slider-height;
+                @include media('<=phone') {
+                  margin-top: 230px;
+                  margin-left: 235px;
+                }
               }
               
               .wrapper {
@@ -92,6 +118,10 @@
                 margin-top: -20px;
                 box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
                 z-index: 2;
+                @include media('<=phone') {
+                  width: 35px;
+                  height: 35px;
+                }
               }
               
               .prev,
@@ -109,6 +139,9 @@
               .next {
                 background-image: url('../IMG/Right.png');
                 right: -55px;
+                @include media('<=phone') {
+                  right: 178px;
+                }
               }
               
               .prev:active,
@@ -133,6 +166,10 @@
                 font-family: $lato;
                 letter-spacing: 1px;
                 margin-top: 10px;
+                @include media('<=phone') {
+                  font-size: 12px;
+                  width: 50%;
+                }
               }
         }
         &_companies {
@@ -142,6 +179,14 @@
             position: absolute;
             bottom: 15%;
             left: 25%;
+            @include media('<=phone') {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              align-items: center;
+              left: -20%;
+              bottom: 2%;
+            }
             &_booking {
                 background: url('../IMG/booking.png');
                 background-repeat: no-repeat;
@@ -150,6 +195,13 @@
                 height: 37px;
                 margin-left: 50px;
                 cursor: crosshair;
+                @include media('<=phone') {
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: center;
+                  align-items: center;
+                  left: -20%;
+                }
             }
             &_instacart {
                 background: url('../IMG/Instacart.png');
@@ -159,6 +211,12 @@
                 height: 43px;
                 margin-left: 50px;
                 cursor: crosshair;
+                @include media('<=phone') {
+                  width: 170px;
+                  height: 30px;
+                  margin-top: 15px;
+                  margin-left: 75px;
+                }
             }
             &_PayPal {
                 background: url('../IMG/PayPal.png');
@@ -168,6 +226,10 @@
                 height: 51px;
                 margin-left: 50px;
                 cursor: crosshair;
+                @include media('<=phone') {
+                  margin-top: 15px;
+                  margin-left: 65px;
+                }
             }
             &_Google {
                 background: url('../IMG/Google.png');
@@ -177,6 +239,9 @@
                 height: 53px;
                 margin-left: 50px;
                 cursor: crosshair;
+                @include media('<=phone') {
+                  margin-top: 15px;
+                }
             }
         }
     }

@@ -2,6 +2,9 @@
     height: 100vh;
     background: rgb(2,0,36);
     background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(67,60,138,1) 87%, rgba(0,212,255,1) 100%);
+    @include media('<=phone') {
+        padding-bottom: 240%;
+    }
     &-wrapper {
         height: 100vh;
         display: flex;
@@ -14,11 +17,17 @@
             justify-content: center;
             align-items: center;
             margin-top: 80px;
+            @include media('<=phone') {
+                margin-top: 20px;
+            }
             h1 {
                 color: $white;
                 font-family: $poppins;
                 font-weight: 600;
                 font-size: 35px;
+                @include media('<=phone') {
+                    font-size: 26px;
+                }
             }
             h5 {
                 color: $white;
@@ -27,6 +36,10 @@
                 font-size: 18px;
                 letter-spacing: 1px;
                 margin-top: 10px;
+                @include media('<=phone') {
+                   font-size: 11px;
+                   margin-left: 10px;
+                }
             }
             .second {
                 color: $white;
@@ -35,6 +48,10 @@
                 font-size: 18px;
                 letter-spacing: 1px;
                 margin-top: 3px;
+                @include media('<=phone') {
+                    font-size: 11px;
+                    margin-left: 10px;
+                }
             }
         }
         &_cards {
@@ -45,6 +62,12 @@
             margin-top: 25px;
             margin-right: 10px;
             width: 100%;
+            @include media('<=phone') {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                margin-top: 400px;
+            }
             .cardik {
                 height: 600px;
                 width: 310px;
@@ -54,6 +77,11 @@
                 justify-content: flex-start;
                 align-items: center;
                 cursor: pointer;
+                @include media('<=phone') {
+                    height: 450px;
+                    width: 260px;
+                    margin-top: 100px;
+                }
                 &_image-1 {
                     background: url('../IMG/food_app.png');
                     background-repeat: no-repeat;
@@ -63,6 +91,14 @@
                     -webkit-box-shadow: 45px -43px 13px -10px rgba(132, 134, 135, 0.2);
                     -moz-box-shadow: 45px -43px 13px -10px rgba(132, 134, 135, 0.2);
                     box-shadow: 45px -43px 13px -10px rgba(132, 134, 135, 0.2);
+                    @include media('<=phone') {
+                        height: 260px;
+                        width: 200px;
+                        -webkit-box-shadow: 12px -53px 22px 0px rgba(145, 176, 201, 0.2);
+                        -moz-box-shadow: 12px -53px 22px 0px rgba(145, 176, 201, 0.2);
+                        box-shadow: 12px -53px 22px 0px rgba(145, 176, 201, 0.2);
+                        margin-right: 100px;
+                    }
                 }
                 &_image-2 {
                     background: url('../IMG/weather.png');
@@ -73,6 +109,14 @@
                     -webkit-box-shadow: 45px -43px 13px -10px rgba(132, 134, 135, 0.2);
                     -moz-box-shadow: 45px -43px 13px -10px rgba(132, 134, 135, 0.2);
                     box-shadow: 45px -43px 13px -10px rgba(132, 134, 135, 0.2);
+                    @include media('<=phone') {
+                        height: 260px;
+                        width: 200px;
+                        -webkit-box-shadow: 12px -53px 22px 0px rgba(145, 176, 201, 0.2);
+                        -moz-box-shadow: 12px -53px 22px 0px rgba(145, 176, 201, 0.2);
+                        box-shadow: 12px -53px 22px 0px rgba(145, 176, 201, 0.2);
+                        margin-right: 100px;
+                    }
                 }
                 &_image-3 {
                     background: url('../IMG/travel.png');
@@ -83,8 +127,19 @@
                     -webkit-box-shadow: 45px -43px 13px -10px rgba(132, 134, 135, 0.2);
                     -moz-box-shadow: 45px -43px 13px -10px rgba(132, 134, 135, 0.2);
                     box-shadow: 45px -43px 13px -10px rgba(132, 134, 135, 0.2);
+                    @include media('<=phone') {
+                        height: 260px;
+                        width: 200px;
+                        -webkit-box-shadow: 14px -31px 14px 0px rgba(155, 174, 189, 0.2);
+                        -moz-box-shadow: 14px -31px 14px 0px rgba(155, 174, 189, 0.2);
+                        box-shadow: 14px -31px 14px 0px rgba(155, 174, 189, 0.2);
+                        margin-right: 100px;
+                    }
                 }
                 &_text {
+                    @include media('<=phone') {
+                        margin-right: 100px;
+                    }
                     h4 {
                         color: $white;
                         font-family: $lato;

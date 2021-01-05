@@ -2,7 +2,7 @@
     height: 70vh;
     @include media('<=phone') {
         margin-top: 100px;
-        height: 100vh;
+        height: 80vh;
     }
     &-wrapper {
         height: 70vh;
@@ -10,9 +10,10 @@
         justify-content: space-around;
         align-items: center;
         @include media('<=phone') {
-            height: 100vh;
+            height: 80vh;
             display: flex;
             flex-direction: column;
+            justify-content: center;
         }
         &_image {
             background: url('../IMG/workplace.png');
