@@ -1,5 +1,8 @@
 .section-work {
     height: 70vh;
+    @include media('<=tablet') {
+        height: 80vh;
+    }
     @include media('<=phone') {
         margin-top: 100px;
         height: 80vh;
@@ -9,6 +12,14 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        @include media('<=tablet') {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-left: 20px;
+        }
         @include media('<=phone') {
             height: 80vh;
             display: flex;
@@ -21,6 +32,10 @@
             background-size: contain;
             width: 500px;
             height: 500px;
+            @include media('<=tablet') {
+                width: 420px;
+                height: 390px;
+            }
             @include media('<=phone') {
                 width: 300px;
                 height: 250px;
@@ -33,11 +48,20 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
+            @include media('<=tablet') {
+                width: 100%;
+            }
             @include media('<=phone') {
                 width: 100%;
             }
             &_title {
                 margin-right: 225px;
+                @include media('<=desktop') {
+                    margin-right: 10px;
+                }
+                @include media('<=tablet') {
+                    margin-right: 255px;
+                }
                 @include media('<=phone') {
                     margin-right: 0;
                 }
@@ -45,6 +69,9 @@
                     font-family: $poppins;
                     font-size: 40px;
                     color: $dark-blue;
+                    @include media('<=tablet') {
+                        font-size: 33px;
+                    }
                     @include media('<=phone') {
                         font-size: 23px;
                     }
@@ -52,6 +79,9 @@
             }
             &_subtitle {
                 width: 70%;
+                @include media('<=tablet') {
+                    width: 100%;
+                }
                 @include media('<=phone') {
                     width: 100%;
                     margin-left: 30px;
@@ -84,6 +114,9 @@
                     justify-content: flex-start;
                     align-items: center;
                     width: 70%;
+                    @include media('<=tablet') {
+                        width: 100%;
+                    }
                     @include media('<=phone') {
                         width: 95%;
                     }

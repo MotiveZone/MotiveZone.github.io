@@ -2,6 +2,9 @@
     height: 100vh;
     background: rgb(2,0,36);
     background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(67,60,138,1) 87%, rgba(0,212,255,1) 100%);
+    @include media('<=tablet') {
+        padding-bottom: 145%;
+    }
     @include media('<=phone') {
         padding-bottom: 240%;
     }
@@ -25,6 +28,9 @@
                 font-family: $poppins;
                 font-weight: 600;
                 font-size: 35px;
+                @include media('<=tablet') {
+                    font-size: 27px;
+                }  
                 @include media('<=phone') {
                     font-size: 26px;
                 }
@@ -36,6 +42,9 @@
                 font-size: 18px;
                 letter-spacing: 1px;
                 margin-top: 10px;
+                @include media('<=tablet') {
+                    font-size: 12px;
+                }   
                 @include media('<=phone') {
                    font-size: 11px;
                    margin-left: 10px;
@@ -48,6 +57,9 @@
                 font-size: 18px;
                 letter-spacing: 1px;
                 margin-top: 3px;
+                @include media('<=tablet') {
+                    font-size: 12px;
+                }   
                 @include media('<=phone') {
                     font-size: 11px;
                     margin-left: 10px;
@@ -62,6 +74,13 @@
             margin-top: 25px;
             margin-right: 10px;
             width: 100%;
+            @include media('<=tablet') {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 480px;
+            }
             @include media('<=phone') {
                 display: flex;
                 flex-direction: column;
@@ -77,6 +96,9 @@
                 justify-content: flex-start;
                 align-items: center;
                 cursor: pointer;
+                @include media('<=tablet') {
+                    margin-top: 100px;
+                }
                 @include media('<=phone') {
                     height: 450px;
                     width: 260px;

@@ -11,6 +11,12 @@
         justify-content: flex-start;
         align-items: center;
         align-items: flex-start;
+        @include media('<=tablet') {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
         @include media('<=phone') {
           height: 100vh;
           display: flex;
@@ -69,6 +75,11 @@
                 transform: translate(-50%, -50%);
                 width: $slider-width;
                 height: $slider-height;
+                @include media('<=tablet') {
+                  margin-top: 320px;
+                  margin-left: 10px;
+                  margin-right: 50px;
+                }
                 @include media('<=phone') {
                   margin-top: 230px;
                   margin-left: 235px;
@@ -179,6 +190,14 @@
             position: absolute;
             bottom: 15%;
             left: 25%;
+            @include media('<=tablet') {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: flex-start;
+              align-items: flex-start;
+              left: 12%;
+              bottom: 7%;
+            }
             @include media('<=phone') {
               display: flex;
               flex-wrap: wrap;
@@ -226,6 +245,9 @@
                 height: 51px;
                 margin-left: 50px;
                 cursor: crosshair;
+                @include media('<=tablet') {
+                  margin-top: 35px;
+                }
                 @include media('<=phone') {
                   margin-top: 15px;
                   margin-left: 65px;
@@ -239,6 +261,9 @@
                 height: 53px;
                 margin-left: 50px;
                 cursor: crosshair;
+                @include media('<=tablet') {
+                  margin-top: 35px;
+                }
                 @include media('<=phone') {
                   margin-top: 15px;
                 }
